@@ -1,0 +1,398 @@
+/*
+#87CFC2
+TABLE OF CONTENTS
+1. universal styles
+2. nav styles
+3. index
+4. alphabet
+5. terms
+6. videos
+7. quiz
+*/
+
+/*----------------------------------------------1. universal styles-----------------------------------------------------*/
+body {
+font-family: chalkboard, sans-serif; 
+}
+
+.title {
+    color:#000;
+	margin-top:30px;
+	font-size:50px;
+	text-align:center;
+	text-transform:uppercase;
+}
+
+.pagedescrip {
+    color:#000;
+	margin-top:30px;
+    margin-left:18%;
+	margin-right:18%;
+	font-size:18px;
+	text-align:center;
+}
+
+a {
+    color: #87CFC2;
+    text-decoration: none;
+}
+
+a:hover {
+    color: black;
+}
+
+footer {
+    background: #87CFC2;
+    padding: 1.5%;
+    text-align: center;
+}
+
+
+
+/*-----------------------------------------------2. nav styles---------------------------------------------------------*/
+nav {
+	margin-top:0;
+	width:100%;
+	position:relative;
+    background-color: #87CFC2;
+}
+
+nav ul {
+	margin: 0;
+	display:flex;
+	justify-content:space-between;
+	padding: 0 40px;
+}
+
+nav li {
+	font-size: 18px;
+	list-style-type: none;
+	text-transform: uppercase;
+    font-family: chalkboard, sans-serif; 
+}
+
+nav li a {
+	color: #ffffff;
+	text-decoration: none;
+	display: inline-block;
+	text-align: center;
+    padding: 35px ;
+	width: 120px;
+}
+
+nav li a:hover {
+    color: black;
+
+}
+
+
+
+
+/*----------------------------------------------------3. index---------------------------------------------------------*/
+.heading {
+    color:#000;
+	margin-top:20px;
+    margin-left:13%;
+	margin-right:13%;
+	font-size:25px;
+}
+
+.description {
+   color:#000;
+	margin-top:20px;
+    margin-left:10%;
+	margin-right:10%;
+	font-size:18px;
+
+}
+
+/*----------------------------------------------------4. alphabet and numbers------------------------------------------*/
+/*---size of all pictures---*/
+#a, #b, #c, #d, #e, #f, #g, #h, #i, #j, #k, #l, #m, #n, #o, #p, #q, #r, #s, #t, #u, #v, #w, #x, #y, #z
+{
+	width:300px;
+	height:300px;
+    background-size:cover;
+    background-repeat:no-repeat;
+    
+}
+
+/*--- picture in box---*/
+#a {
+	background-image:url("../media/a.jpg");
+}
+#b {
+	background-image:url("../media/b.jpg");
+}
+#c {
+	background-image:url("../media/c.jpg");
+}
+#d {
+	background-image:url("../media/d.jpg");
+}
+#e {
+	background-image:url("../media/e.jpg");
+}
+#f {
+	background-image:url("../media/f.jpg");
+}
+#g {
+	background-image:url("../media/g.jpg");
+}
+#h {
+	background-image:url("../media/h.jpg");
+}
+#i {
+	background-image:url("../media/i.jpg");
+}
+#j {
+	background-image:url("../media/j.jpg");
+}
+#k {
+	background-image:url("../media/k.jpg");
+}
+#l {
+	background-image:url("../media/l.jpg");
+}
+#m {
+	background-image:url("../media/m.jpg");
+}
+#n {
+	background-image:url("../media/n.jpg");
+}
+#o {
+	background-image:url("../media/o.jpg");
+}
+#p {
+	background-image:url("../media/p.jpg");
+}
+#q {
+	background-image:url("../media/q.jpg");
+}
+#r {
+	background-image:url("../media/r.jpg");
+}
+#s {
+	background-image:url("../media/s.jpg");
+}
+#t {
+	background-image:url("../media/t.jpg");
+}
+#u {
+	background-image:url("../media/u.jpg");
+}
+#v {
+	background-image:url("../media/v.jpg");
+}
+#w {
+	background-image:url("../media/w.jpg");
+}
+#x {
+	background-image:url("../media/x.jpg");
+}
+#y {
+	background-image:url("../media/y.jpg");
+}
+#z {
+	background-image:url("../media/z.jpg");
+}
+
+
+
+
+
+/*------------ blue animation ----------*/
+.alphabet:hover {
+    /*--
+	box-shadow:inset 0 0 0 300px rgba(135,207,194,0.5);
+    --*/
+    box-shadow:inset 0 0 0 150px rgba(135,207,194,0.5);
+    opacity: 30%
+}
+
+/*---------- letter pop up on hover----i have a feeling that this section is causing the weird hover effect with the alphabet --*/
+.alphabetfade:hover .letter {
+	opacity:3;                 
+	transform:scale(3);                     
+}
+
+/*------------ box spacing------------*/
+.alphabetfade {
+	width:inherit;
+	height:inherit;
+	margin:auto;
+	padding-top:110px;
+	transition:all 0.1s ease-in-out;
+}
+
+/*--------- actual letter in box---------*/
+.letter {
+	text-align:center;
+	font-size:50px;
+	color:#ffffff;
+	width:60%;
+	padding:5px;
+	margin:auto;
+	transition:all 0.2s;
+	opacity:0;
+	transform:scale(1);
+}
+
+/*---several images in one line code---*/
+.alphabet{
+    display: inline-block;
+    margin: 5px;
+}
+
+.alpha{
+    margin:0 10%;
+    text-align: center;
+}
+
+#alphatitle{
+    text-align: center;
+    margin-top: 110px;
+    font-size: 40px;
+}
+
+/*--------Numbers-----*/
+.numbers{
+    display: inline-block;
+    margin:0 10%;
+}
+
+#numbstitle{
+    text-align: center;
+    margin-top: 150px;
+    font-size: 40px;
+}
+
+
+/*-------descrtiption of images-----*/
+.ncaption{
+    float: left;
+    width: 300px;
+    margin: 5px;
+    font-size: 40px;
+}
+
+.numbsdescription{
+    display: inline-block;
+    width: 300px;
+    text-align: center;
+    margin: auto;
+}
+
+
+/*----------------------------------------------------5. terms----------------------------------------------------------*/
+.terms{
+    display: inline-block;
+    margin:0 10%;
+    margin-top: 150px; 
+    text-align: center;
+}
+
+.termdescrip {
+    color: #87CFC2;
+    font-size: 25px;
+    width: 300px;
+    text-align: center;
+}
+
+.caption{
+    display: inline-block;
+    width: 300px;
+    margin: 5px;
+}
+
+/*----------------------------------------------------6. videos---------------------------------------------------------*/
+iframe {
+    width: 650px;
+    height: 350px;
+    margin-top:35px;
+}
+
+.videodescrip {
+    width: 650px;
+    margin-top: 150px;
+    margin-bottom: 2px;
+    color: #87CFC2;
+    font-size: 30px;
+}
+
+.videos{
+    display: inline-block;
+    margin:0 10%;
+    text-align: center;
+}
+
+.individeos{
+    display: inline-block;
+}
+
+
+/*----------------------------------------------------7. quiz page------------------------------------------------------*/
+
+
+
+/*----------------------------------------------------8. contact page---------------------------------------------------*/
+
+
+/*--------- circle ---------*/
+
+#circle{
+    margin: 50px 10%;
+    text-align: center;
+}
+
+.team {
+	width:215px;
+	height:215px;
+	border-radius: 20%;
+    display: inline-block;
+}
+
+.name {
+	margin:auto;
+	font-size:22px;
+	text-align:center;
+	margin-top:230px;
+}
+
+/*--------- images and circle placement ---------*/
+#natalia {
+	background-image:url("../media/natalia.jpg");
+	background-size:cover;
+}
+
+#crystal {
+	background-image:url("../media/crystal.jpg");
+	background-size:cover;
+}
+
+#elda {
+	background-image:url("../media/elda.jpg");
+	background-size:cover;
+}
+
+/*---------- YouTube Channel link ---------*/
+.youtubechannel {
+    text-align: center;
+    font-size: 22px;
+    margin-top: 50px;
+    margin-bottom: 70px;
+}
+
+#icon{
+    width: 50px;
+    vertical-align: middle;
+}
+
+
+
+
+
+
+
+
+

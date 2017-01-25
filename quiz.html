@@ -5,37 +5,49 @@
         <link rel="shortcut icon" href="">
         <title>The Handy Language</title>
        <link type="text/css" rel="stylesheet" href="assets/css/style.css" media="screen">
+    <script src="assets/javascript/quiz1.js"></script>  
     </head>
-    
     <body>
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a> </li>
-                <li><a href="alphabet.html">Alphabet</a> </li>
-                <li><a href="terms.html">Terms</a> </li>
-                <li><a href="videos.html">Videos</a> </li> 
-                <li><a href="quiz.html">Quiz</a> </li> 
-                <li><a href="contact.html">Contact</a> </li>
-            </ul>
-        </nav>  
+    <!-- http://www.w3schools.com/howto/tryit.asp?filename=tryhow_js_topnav -->
+                <ul class="topnav" id="myTopnav">
+                    <li class="nav_li"><a href="index.html">Home</a> </li>
+                    <li class="nav_li"><a href="alphabet.html">Alphabet</a> </li>
+                    <li class="nav_li"><a href="numbers.html">Numbers</a> </li>
+                    <li class="nav_li"><a href="terms.html">Terms</a> </li>
+                    <li class="nav_li"><a href="videos.html">Videos</a> </li> 
+                    <li class="nav_li"><a href="quiz.html">Quiz</a> </li> 
+                    <li class="nav_li"><a href="contact.html">Contact</a> </li>
+                    
+                    <li class="icon">
+                        <a href="javascript:void(0);" onclick="myFunction()">&#9776;</a>
+                    </li>
+                 </ul>   
         
         <div>
             <h2 class="title">Quiz your ASL skills!</h2>
-            <p class="pagedescrip">We have made a couple of quizzes to test your ASL skills. Each quiz has images or pharases that we have on the website.</p>
+            <p class="pagedescrip">These are a few quizzes to test your ASL skills. The First quiz tests how well you know the alphabet/letters and numbers. The second quiz tests how well you know the terms that are on the site. The third and final quiz tests how well you know some of the signs that are on the videos. Good luck!</p>
         </div>
         
-        <div>
-            <p>Terms</p>
-        </div>
+
+    <div id="quizes">
+        <div> <a class= "quizlinks"href="quiz1.html">
+    <p class="quiztitle">Alphabet & Numbers Quiz
+    </p>
+      </a>
+</div>
         
-        <div>
-            <p>Alphabet</p>
-        </div>
+         <div> <a class= "quizlinks"href="quiz2.html">
+    <p class="quiztitle">Terms Quiz
+    </p>
+      </a>
+</div>
         
-        <div>
-            <p>videos</p>
-        </div>
-    
+         <div> <a class= "quizlinks"href="quiz3.html">
+    <p class="quiztitle">Videos Quiz
+    </p>
+      </a>
+</div>
+    </div> 
         
         <!--FOOTER-->    
         <footer>

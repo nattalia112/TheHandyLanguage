@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <link rel="shortcut icon" href="">
+        <title>The Handy Language</title>
+        <link type="text/css" rel="stylesheet" href="assets/css/style.css" media="screen">
+        <script src="assets/javascript/quiz1.js"></script>
+    <script src="assets/javascript/quiz1.js"></script>  
+    </head>
+    <body>
+    <!-- http://www.w3schools.com/howto/tryit.asp?filename=tryhow_js_topnav -->
+                <ul class="topnav" id="myTopnav">
+                    <li class="nav_li"><a href="index.html">Home</a> </li>
+                    <li class="nav_li"><a href="alphabet.html">Alphabet</a> </li>
+                    <li class="nav_li"><a href="numbers.html">Numbers</a> </li>
+                    <li class="nav_li"><a href="terms.html">Terms</a> </li>
+                    <li class="nav_li"><a href="videos.html">Videos</a> </li> 
+                    <li class="nav_li"><a href="quiz.html">Quiz</a> </li> 
+                    <li class="nav_li"><a href="contact.html">Contact</a> </li>
+                    
+                    <li class="icon">
+                        <a href="javascript:void(0);" onclick="myFunction()">&#9776;</a>
+                    </li>
+                 </ul>   
+        
+        <div>
+            <h2 class="title">ALPHABET & NUMBERS QUIZ</h2>
+            <p class="pagedescrip">For questions 1 - 15 choose the correct word that the ASL letters spell out.</p>
+            <div id = "frame" role = "content" >
+            <h2 id="test_status"></h2>
+            <div id="test"></div>
+     </div>
+        
+     <!------
+        <div class="qanda"
+            
+<!------- Question 1 (a. cat)-------    
+<div class="qnumber">    
+    <p>1.</p><img class="qpicture" src="assets/media/placeholder.png"width="400px" height="170"style="border:none"/>
+ </div>
+            
+<div class= "choices">       
+    <div>            
+        <input type="radio" name="question-1-answers" id="question-1-answers-A" value="A" />
+        <label for="question-1-answers-A">A) Cat </label>
+    </div>
+    
+    <div>
+        <input type="radio" name="question-1-answers" id="question-1-answers-B" value="B" />
+        <label for="question-1-answers-B">B) Cow</label>
+    </div>
+    
+    <div>
+        <input type="radio" name="question-1-answers" id="question-1-answers-C" value="C" />
+        <label for="question-1-answers-C">C) Cop</label>
+    </div>
+    
+    <div>
+        <input type="radio" name="question-1-answers" id="question-1-answers-D" value="D" />
+        <label for="question-1-answers-D">D) Out</label>
+    </div> 
+ </div>  
+<hr>
+<!------- Question 2 (c. run)-------
+    
+<div class="qnumber">    
+    <p>2.</p><img class="qpicture" src="assets/media/placeholder.png"width="400px" height="170"style="border:none"/>
+</div>
+            
+<div class= "choices">       
+    <div>
+        <input type="radio" name="question-2-answers" id="question-2-answers-A" value="A" />
+        <label for="question-2-answers-A">A)  Top</label>
+    </div>
+    
+    <div>
+        <input type="radio" name="question-2-answers" id="question-2-answers-B" value="B" />
+        <label for="question-2-answers-B">B) Mop</label>
+    </div>
+    
+    <div>
+        <input type="radio" name="question-2-answers" id="question-2-answers-C" value="C" />
+        <label for="question-2-answers-C">C) Run</label>
+    </div>
+    
+    <div>
+        <input type="radio" name="question-2-answers" id="question-2-answers-D" value="D" />
+        <label for="question-2-answers-D">D) Out</label>
+    </div>
+</div>
+<hr>
+<!------- Question 3 (d. food)-------  
+<div class="qnumber">    
+    <p>3.</p><img class="qpicture" src="assets/media/placeholder.png"width="400px" height="170"style="border:none"/>
+</div>
+            
+<div class= "choices">       
+    <div>
+        <input type="radio" name="question-3-answers" id="question-3-answers-A" value="A" />
+        <label for="question-1-answers-A">A)  Pool</label>
+    </div>
+    
+    <div>
+        <input type="radio" name="question-3-answers" id="question-3-answers-B" value="B" />
+        <label for="question-3-answers-B">B) Soup</label>
+    </div>
+    
+    <div>
+        <input type="radio" name="question-3-answers" id="question-3-answers-C" value="C" />
+        <label for="question-3-answers-C">C) Cool</label>
+    </div>
+    
+    <div>
+        <input type="radio" name="question-3-answers" id="question-3-answers-D" value="D" />
+        <label for="question-3-answers-D">D) Food</label>
+    </div>
+</div>
+<hr>           
+<!------- Question 4 (d. jump)-------
+<div class="qnumber">    
+    <p>4.</p><img class="qpicture" src="assets/media/placeholder.png"width="400px" height="170"style="border:none"/>
+</div>
+            
+<div class= "choices">       
+    <div>
+        <input type="radio" name="question-4-answers" id="question-4-answers-A" value="A" />
+        <label for="question-4-answers-A">A)  Vote</label>
+    </div>
+    
+    <div>
+        <input type="radio" name="question-4-answers" id="question-4-answers-B" value="B" />
+        <label for="question-4-answers-B">B) Jeep</label>
+    </div>
+    
+    <div>
+        <input type="radio" name="question-4-answers" id="question-4-answers-C" value="C" />
+        <label for="question-4-answers-C">C) Junk</label>
+    </div>
+    
+    <div>
+        <input type="radio" name="question-4-answers" id="question-4-answers-D" value="D" />
+        <label for="question-4-answers-D">D) Jump</label>
+    </div>
+</div>
+<hr>   
+<!------- Question 5 (a. vote)-------
+<div class="qnumber">    
+    <p>5.</p><img class="qpicture" src="assets/media/placeholder.png"width="400px" height="170"style="border:none"/>
+</div>
+            
+<div class= "choices">       
+    <div>
+        <input type="radio" name="question-5-answers" id="question-5-answers-A" value="A" />
+        <label for="question-5-answers-A">A)  Vote</label>
+    </div>
+    
+    <div>
+        <input type="radio" name="question-5-answers" id="question-5-answers-B" value="B" />
+        <label for="question-5-answers-B">B) Vans</label>
+    </div>
+    
+    <div>
+        <input type="radio" name="question-5-answers" id="question-5-answers-C" value="C" />
+        <label for="question-5-answers-C">C) Toes</label>
+    </div>
+    
+    <div>
+        <input type="radio" name="question-5-answers" id="question-5-answers-D" value="D" />
+        <label for="question-5-answers-D">D) Void</label>
+    </div>
+</div>
+<hr>
+<!------- Question 6 (b. quiz)-------  
+<div class="qnumber">    
+    <p>6.</p><img class="qpicture" src="assets/media/placeholder.png"width="400px" height="170"style="border:none"/>
+</div>
+            
+<div class= "choices">       
+    <div>
+        <input type="radio" name="question-6-answers" id="question-6-answers-A" value="A" />
+        <label for="question-6-answers-A">A)  Jazz</label>
+    </div>
+    
+    <div>
+        <input type="radio" name="question-6-answers" id="question-6-answers-B" value="B" />
+        <label for="question-6-answers-B">B) Quiz</label>
+    </div>
+    
+    <div>
+        <input type="radio" name="question-6-answers" id="question-6-answers-C" value="C" />
+        <label for="question-6-answers-C">C) Prez</label>
+    </div>
+    
+    <div>
+        <input type="radio" name="question-6-answers" id="question-6-answers-D" value="D" />
+        <label for="question-6-answers-D">D) Lake</label>
+    </div>
+</div>
+<hr>   
+<!------- Question 7 (c. sway)------- 
+<div class="qnumber">    
+    <p>7.</p><img class="qpicture" src="assets/media/placeholder.png"width="400px" height="170"style="border:none"/>
+</div>
+            
+<div class= "choices">       
+    <div>
+        <input type="radio" name="question-7-answers" id="question-7-answers-A" value="A" />
+        <label for="question-7-answers-A">A)  Wave</label>
+    </div>
+    
+    <div>
+        <input type="radio" name="question-7-answers" id="question-7-answers-B" value="B" />
+        <label for="question-7-answers-B">B) Body</label>
+    </div>
+    
+    <div>
+        <input type="radio" name="question-7-answers" id="question-7-answers-C" value="C" />
+        <label for="question-7-answers-C">C) Sway</label>
+    </div>
+    
+    <div>
+        <input type="radio" name="question-7-answers" id="question-7-answers-D" value="D" />
+        <label for="question-7-answers-D">D) Swat</label>
+    </div>
+</div>  
+<hr>          
+<!------- Question 8 (b. water)------- 
+<div class="qnumber">    
+    <p>8.</p><img class="qpicture" src="assets/media/placeholder.png"width="400px" height="170"style="border:none"/>
+</div>
+            
+<div class= "choices">       
+    <div>
+        <input type="radio" name="question-8-answers" id="question-8-answers-A" value="A" />
+        <label for="question-8-answers-A">A)  Warm</label>
+    </div>
+    
+    <div>
+        <input type="radio" name="question-8-answers" id="question-8-answers-B" value="B" />
+        <label for="question-8-answers-B">B) Water</label>
+    </div>
+    
+    <div>
+        <input type="radio" name="question-8-answers" id="question-8-answers-C" value="C" />
+        <label for="question-8-answers-C">C) Wasp</label>
+    </div>
+    
+    <div>
+        <input type="radio" name="question-8-answers" id="question-8-answers-D" value="D" />
+        <label for="question-8-answers-D">D) Three</label>
+    </div>
+</div> 
+<hr>            
+<!------- Question 9 (a. job)-------  
+<div class="qnumber">    
+    <p>9.</p><img class="qpicture" src="assets/media/placeholder.png"width="400px" height="170"style="border:none"/>
+</div>
+            
+<div class= "choices">       
+    <div>
+        <input type="radio" name="question-9-answers" id="question-9-answers-A" value="A" />
+        <label for="question-9-answers-A">A)  Job</label>
+    </div>
+    
+    <div>
+        <input type="radio" name="question-9-answers" id="question-9-answers-B" value="B" />
+        <label for="question-9-answers-B">B) Jog</label>
+    </div>
+    
+    <div>
+        <input type="radio" name="question-9-answers" id="question-9-answers-C" value="C" />
+        <label for="question-9-answers-C">C) Jaw</label>
+    </div>
+    
+    <div>
+        <input type="radio" name="question-9-answers" id="question-9-answers-D" value="D" />
+        <label for="question-9-answers-D">D) Use</label>
+    </div>
+</div> 
+<hr>
+<!------- Question 10 (c. mountain)-------
+<div class="qnumber">    
+    <p>10.</p><img class="qpicture" src="assets/media/placeholder.png"width="400px" height="170"style="border:none"/>
+</div>
+            
+<div class= "choices">       
+    <div>
+        <input type="radio" name="question-10-answers" id="question-10-answers-A" value="A" />
+        <label for="question-10-answers-A">A)  Macaroni</label>
+    </div>
+    
+    <div>
+        <input type="radio" name="question-10-answers" id="question-10-answers-B" value="B" />
+        <label for="question-10-answers-B">B) Machine</label>
+    </div>
+    
+    <div>
+        <input type="radio" name="question-10-answers" id="question-10-answers-C" value="C" />
+        <label for="question-10-answers-C">C) Mountain</label>
+    </div>
+    
+    <div>
+        <input type="radio" name="question-10-answers" id="question-10-answers-D" value="D" />
+        <label for="question-10-answers-D">D) Macaroon</label>
+    </div>
+</div>    
+<hr>           
+    <p class="pagedescrip">For questions 11 - 15 choose the correct number that the sign shows.
+    </p>            
+            
+<!------- Question 11 (d. 9)-------  
+<div class="qnumber">    
+    <p>11.</p><img class="qpicture" src="assets/media/placeholder.png"width="400px" height="170"style="border:none"/>
+</div>
+            
+<div class= "choices">       
+    <div>
+        <input type="radio" name="question-11-answers" id="question-11-answers-A" value="A" />
+        <label for="question-11-answers-A">A)  3</label>
+    </div>
+    
+    <div>
+        <input type="radio" name="question-11-answers" id="question-11-answers-B" value="B" />
+        <label for="question-11-answers-B">B) 6</label>
+    </div>
+    
+    <div>
+        <input type="radio" name="question-11-answers" id="question-11-answers-C" value="C" />
+        <label for="question-11-answers-C">C) 1</label>
+    </div>
+    
+    <div>
+        <input type="radio" name="question-11-answers" id="question-11-answers-D" value="D" />
+        <label for="question-11-answers-D">D) 9</label>
+    </div>
+</div>
+<hr>   
+<!------- Question 12 (a. 0)------- 
+<div class="qnumber">    
+    <p>12.</p><img class="qpicture" src="assets/media/placeholder.png"width="400px" height="170"style="border:none"/>
+</div>
+            
+<div class= "choices">       
+    <div>
+        <input type="radio" name="question-12-answers" id="question-12-answers-A" value="A" />
+        <label for="question-12-answers-A">A)  0</label>
+    </div>
+    
+    <div>
+        <input type="radio" name="question-12-answers" id="question-12-answers-B" value="B" />
+        <label for="question-12-answers-B">B) 10</label>
+    </div>
+    
+    <div>
+        <input type="radio" name="question-12-answers" id="question-12-answers-C" value="C" />
+        <label for="question-12-answers-C">C) 9</label>
+    </div>
+    
+    <div>
+        <input type="radio" name="question-12-answers" id="question-12-answers-D" value="D" />
+        <label for="question-12-answers-D">D) 8</label>
+    </div>
+</div>
+<hr>    
+<!------- Question 13 (d. 6)------- 
+<div class="qnumber">    
+    <p>13.</p><img class="qpicture" src="assets/media/placeholder.png"width="400px" height="170"style="border:none"/>
+</div>
+            
+<div class= "choices">       
+    <div>
+        <input type="radio" name="question-13-answers" id="question-13-answers-A" value="A" />
+        <label for="question-13-answers-A">A)  6</label>
+    </div>
+    
+    <div>
+        <input type="radio" name="question-13-answers" id="question-13-answers-B" value="B" />
+        <label for="question-13-answers-B">B) 3</label>
+    </div>
+    
+    <div>
+        <input type="radio" name="question-13-answers" id="question-13-answers-C" value="C" />
+        <label for="question-13-answers-C">C) 2</label>
+    </div>
+    
+    <div>
+        <input type="radio" name="question-13-answers" id="question-13-answers-D" value="D" />
+        <label for="question-13-answers-D">D) 6</label>
+    </div>
+</div>
+<hr>   
+<!------- Question 14 (b. 8)------- 
+<div class="qnumber">    
+    <p>14.</p><img class="qpicture" src="assets/media/placeholder.png"width="400px" height="170"style="border:none"/>
+</div>
+            
+<div class= "choices">       
+    <div>
+        <input type="radio" name="question-14-answers" id="question-14-answers-A" value="A" />
+        <label for="question-14-answers-A">A)  3</label>
+    </div>
+    
+    <div>
+        <input type="radio" name="question-14-answers" id="question-14-answers-B" value="B" />
+        <label for="question-14-answers-B">B) 8</label>
+    </div>
+    
+    <div>
+        <input type="radio" name="question-14-answers" id="question-14-answers-C" value="C" />
+        <label for="question-14-answers-C">C) 2</label>
+    </div>
+    
+    <div>
+        <input type="radio" name="question-14-answers" id="question-14-answers-D" value="D" />
+        <label for="question-14-answers-D">D) 7</label>
+    </div>
+</div> 
+<hr>           
+<!------- Question 15 (d.7)-------
+<div class="qnumber">    
+    <p>15.</p><img class="qpicture" src="assets/media/placeholder.png"width="400px" height="170"style="border:none"/>
+</div>
+            
+<div class= "choices">       
+    <div>
+        <input type="radio" name="question-15-answers" id="question-15-answers-A" value="A" />
+        <label for="question-15-answers-A">A)  3</label>
+    </div>
+    
+    <div>
+        <input type="radio" name="question-15-answers" id="question-15-answers-B" value="B" />
+        <label for="question-15-answers-B">B) 8</label>
+    </div>
+    
+    <div>
+        <input type="radio" name="question-15-answers" id="question-15-answers-C" value="C" />
+        <label for="question-15-answers-C">C) 9</label>
+    </div>
+    
+    <div>
+        <input type="radio" name="question-15-answers" id="question-15-answers-D" value="D" />
+        <label for="question-15-answers-D">D) 7</label>
+    </div>
+</div>
+<div class="submitb">
+    <input type="submit" value="Submit">
+</div>
+        <!-------- submit button -------->
+           
+      
+    <!--FOOTER-->    
+        <footer>
+			Coded by Crystal Menjivar, Elda Mekonnen, and Natalia Lopez &copy 2017
+		</footer>
+    <!--FOOTER-->   
+    </body>
+   
+    
+</html>

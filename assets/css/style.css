@@ -12,7 +12,8 @@ TABLE OF CONTENTS
 
 /*----------------------------------------------1. universal styles-----------------------------------------------------*/
 body {
-font-family: chalkboard, sans-serif; 
+    font-family: chalkboard, sans-serif; 
+    margin: 0px;
 }
 
 .title {
@@ -32,15 +33,6 @@ font-family: chalkboard, sans-serif;
 	text-align:center;
 }
 
-a {
-    color: #87CFC2;
-    text-decoration: none;
-}
-
-a:hover {
-    color: black;
-}
-
 footer {
     background: #87CFC2;
     padding: 1.5%;
@@ -48,67 +40,167 @@ footer {
 }
 
 
-
 /*-----------------------------------------------2. nav styles---------------------------------------------------------*/
-nav {
-	margin-top:0;
-	width:100%;
-	position:relative;
+
+
+@media screen and (min-width: 850px) {
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
     background-color: #87CFC2;
+    text-align: center;
+    margin: 0;
+    display:flex;
+    justify-content:space-between;
+    padding: 0 30px;
 }
 
-nav ul {
-	margin: 0;
-	display:flex;
-	justify-content:space-between;
-	padding: 0 40px;
+ul li {
+    float: left;
+    text-align: center;
+    font-size: 25px
 }
 
-nav li {
-	font-size: 18px;
-	list-style-type: none;
-	text-transform: uppercase;
-    font-family: chalkboard, sans-serif; 
+ul li a {
+    text-decoration: none;
+    color: #fff;
+    display: block;
+    padding: 25px 0px;
 }
 
-nav li a {
-	color: #ffffff;
-	text-decoration: none;
-	display: inline-block;
-	text-align: center;
-    padding: 35px ;
-	width: 120px;
+a:hover {
+    color: #000;
+}
+ 
+/* hides hambuger buttons when large */    
+.closebtn {
+    visibility: hidden;
 }
 
-nav li a:hover {
-    color: black;
+.threelines {
+    visibility: hidden;
+}
+}
 
+/*----------------------------------------------------2.2. hambuger nav---------------------------------------------------------*/
+
+@media all and (max-width: 849px) and (min-width: 280px) {
+
+ul {
+    list-style-type: none;
+}
+    
+.threelines {
+    padding-left: 15px;
+    color: #87CFC2;
+}
+    
+#threelines: hover {
+    color: #000;
+    }
+        
+.sidenav {
+    display: none;
+    height: 100%;
+    width: 250px;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #87CFC2;
+    overflow-x: hidden;
+    padding-top: 60px;
+    list-style-type: none;
+}
+
+.sidenav a {
+    padding: 8px 8px 8px 3px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #fff;
+    display: block;
+    transition: 0.3s;
+}
+
+.sidenav a:hover, .offcanvas a:focus{
+    color: #000;
+}
+
+.sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 200px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
 }
 
 
 
 
 /*----------------------------------------------------3. index---------------------------------------------------------*/
-.heading {
-    color:#000;
-	margin-top:20px;
-    margin-left:13%;
-	margin-right:13%;
-	font-size:25px;
+
+.about{
+    display: inline-block;
+    margin:0 10%;
+    margin-bottom: 30px;
+    text-align:center;
+    display: inline-block;
+    margin:0 10%;
+    margin-top: 110px; 
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 40px;
+}
+
+.box {
+    background-color:#F2F2F2;
+    padding: 20px 20px 0px 20px;
+    font-size: 25px;
+    width: 550px;
+    
+    text-align: center;
+    display: inline-block;
+}
+
+.box2 {
+    background-color:#F2F2F2;
+    padding: 20px 20px 0px 20px;
+    font-size: 25px;
+    width: 550px;
+    
+    text-align: center;
+    display: inline-block;
 }
 
 .description {
-   color:#000;
-	margin-top:20px;
-    margin-left:10%;
-	margin-right:10%;
-	font-size:18px;
+    width: 550px;
+    margin: 5px;
+    font-size: 20px;
+    text-align: center;
+}    
 
+.index_title{
+    font-weight: bold;
+    text-transform: uppercase;
 }
+
+
+
+
+
+
 
 /*----------------------------------------------------4. alphabet and numbers------------------------------------------*/
 /*---size of all pictures---*/
-#a, #b, #c, #d, #e, #f, #g, #h, #i, #j, #k, #l, #m, #n, #o, #p, #q, #r, #s, #t, #u, #v, #w, #x, #y, #z
+#a, #b, #c, #d, #e, #f, #g, #h, #i, #j, #k, #l, #m, #n, #o, #p, #q, #r, #s, #t, #u, #v, #w, #x, #y, #z, #zero, #one, #two, #three, #four, #five, #six, #seven, #eight, #nine
 {
 	width:300px;
 	height:300px;
@@ -196,7 +288,36 @@ nav li a:hover {
 #z {
 	background-image:url("../media/z.jpg");
 }
-
+#zero {
+	background-image:url("../media/zero.jpg");
+}
+#one {
+	background-image:url("../media/1.jpg");
+}
+#two {
+	background-image:url("../media/2.jpg");
+}
+#three {
+	background-image:url("../media/3.jpg");
+}
+#four {
+	background-image:url("../media/4.jpg");
+}
+#five {
+	background-image:url("../media/5.jpg");
+}
+#six {
+	background-image:url("../media/6.jpg");
+}
+#seven {
+	background-image:url("../media/7.jpg");
+}
+#eight {
+	background-image:url("../media/8.jpg");
+}
+#nine {
+	background-image:url("../media/9.jpg");
+}
 
 
 
@@ -209,6 +330,15 @@ nav li a:hover {
     box-shadow:inset 0 0 0 150px rgba(135,207,194,0.5);
     opacity: 30%
 }
+
+.number:hover {
+    /*--
+	box-shadow:inset 0 0 0 300px rgba(135,207,194,0.5);
+    --*/
+    box-shadow:inset 0 0 0 150px rgba(135,207,194,0.5);
+    opacity: 30%
+}
+
 
 /*---------- letter pop up on hover----i have a feeling that this section is causing the weird hover effect with the alphabet --*/
 .alphabetfade:hover .letter {
@@ -247,6 +377,7 @@ nav li a:hover {
 .alpha{
     margin:0 10%;
     text-align: center;
+    margin-bottom: 30px;
 }
 
 #alphatitle{
@@ -264,6 +395,62 @@ nav li a:hover {
 #numbstitle{
     text-align: center;
     margin-top: 150px;
+    font-size: 40px;
+}
+
+
+
+
+/*---------- letter pop up on hover----i have a feeling that this section is causing the weird hover effect with the alphabet --*/
+.numberfade:hover .numbers {
+	opacity:3;                 
+	transform:scale(3);                     
+}
+
+/*------------ box spacing------------*/
+.numberfade {
+	width:inherit;
+	height:inherit;
+	margin:auto;
+	padding-top:110px;
+	transition:all 0.1s ease-in-out;
+}
+
+/*--------- actual letter in box---------*/
+.numbers {
+	text-align:center;
+	font-size:50px;
+	color:#ffffff;
+	width:60%;
+	padding:5px;
+	margin:auto;
+	transition:all 0.2s;
+	opacity:0;
+	transform:scale(1);
+}
+
+/*---several images in one line code---*/
+.number{
+    display: inline-block;
+    margin: 5px;
+}
+
+
+/*---several images in one line code---*/
+.number{
+    display: inline-block;
+    margin: 5px;
+}
+
+.numbers1{
+    margin:0 10%;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+#alphatitle{
+    text-align: center;
+    margin-top: 110px;
     font-size: 40px;
 }
 
@@ -288,8 +475,10 @@ nav li a:hover {
 .terms{
     display: inline-block;
     margin:0 10%;
-    margin-top: 150px; 
+    margin-top: 110px; 
     text-align: center;
+    margin-bottom: 30px;
+    font-size: 40px;
 }
 
 .termdescrip {
@@ -297,6 +486,7 @@ nav li a:hover {
     font-size: 25px;
     width: 300px;
     text-align: center;
+    margin-top: -10px;
 }
 
 .caption{
@@ -304,6 +494,13 @@ nav li a:hover {
     width: 300px;
     margin: 5px;
 }
+
+
+
+
+
+
+
 
 /*----------------------------------------------------6. videos---------------------------------------------------------*/
 iframe {
@@ -314,25 +511,105 @@ iframe {
 
 .videodescrip {
     width: 650px;
-    margin-top: 150px;
-    margin-bottom: 2px;
+    margin:0px;
     color: #87CFC2;
     font-size: 30px;
 }
 
 .videos{
     display: inline-block;
-    margin:0 10%;
+    margin: 5px;
     text-align: center;
+    margin-bottom: 30px;
 }
 
 .individeos{
     display: inline-block;
+    margin: 30px;
 }
+
+
+
+
+
+
+
 
 
 /*----------------------------------------------------7. quiz page------------------------------------------------------*/
 
+#quizes {
+    display: inherit;
+    text-align: center;
+    align-content: center;
+    margin:0 10%;
+    margin-top: 80px;
+    margin-bottom: 30px;
+}
+
+.quiztitle {
+    /* box itself */
+    border: 4px solid #87CFC2;
+    font-family: "chalkboard";
+    font-size: 30px;
+    padding: 30px 30px 30px 30px;
+    
+}
+
+/* ------ link button to quiz pagee ----- */
+.quizlinks {
+    text-decoration: none;
+    color:black;
+}
+
+
+/* ---- hovered quiz button ---- */
+.quizlinks :hover {
+    color: #87CFC2;
+}
+
+
+/*----------------------------------------------------7.1. quiz1 page------------------------------------------------------*/
+
+.qpicture {
+    align-items: center;
+    margin:0 10%;
+    margin-bottom: 10px;
+}
+
+.qnumber {
+    width: 500px;
+    margin: auto;  
+}
+
+.choices {
+    width: 500px;
+    margin: auto;
+    margin-bottom: 60px;
+}
+
+hr {
+    border-style: solid;
+    border-width: 6px;
+    border-color: #87CFC2;
+    align-items: center;
+    margin:0 8%;
+    margin-bottom: 10px;
+}
+
+/*  submit button  */
+
+.submitb {
+    width: 52.5px;
+    margin: auto;
+    margin-bottom: 30px
+}
+
+
+/*----------------------------------------------------7.2. quiz2 page------------------------------------------------------*/
+
+
+/*----------------------------------------------------7.3. quiz3 page------------------------------------------------------*/
 
 
 /*----------------------------------------------------8. contact page---------------------------------------------------*/
@@ -392,6 +669,108 @@ iframe {
 
 
 
+
+
+
+
+
+
+/*----------------------------------------------------Tablet Responsive---------------------------------------------------*/
+/* Styles for some tablet devices */
+@media only screen and (max-width: 1024px) {
+    body {
+        background-color: lightblue;
+    }
+    
+    /* Index */
+    .box{
+        margin-bottom: 40px;
+    }
+    
+    .box2{
+        margin-bottom: 40px;
+    }
+    
+    /* Alphabet */
+   
+    .alphabet:hover {
+    box-shadow:inset 0 0 0 0
+    }
+
+    .letter {
+	opacity:3;
+    transform:scale(2);
+	transition: none;
+    margin-right: -30px;
+    margin-top: 100px;
+    }
+    
+    /* Number */
+    
+    .number:hover {
+    box-shadow:inset 0 0 0 0
+    }
+
+    .numbers{
+	opacity:3;
+    transform:scale(2);
+	transition: none;
+    margin-right: -190px;
+    margin-top: 100px;
+    }
+    
+    /* Terms */
+    .termdescrip{
+    margin-top: -10px; 
+    }
+    
+    /* Videos */
+    .videodescrip{
+    margin-top: 0px;
+    }
+    
+}
+    
+    
+/*-----------Quiz------------*/
+
+#title {
+    font-family: "shree devanagari 714", sans-serif;
+    color: white;
+    margin-top: 6%;
+}
+
+#subjects {
+    font-family: "shree devanagari 714", sans-serif;
+    color: white;
+    font-size: 1em;
+    text-align: center;
+}
+
+div#test{ 
+    border:#000 9px double; 
+    padding:10px 40px 40px 40px;
+    font-size: 20px;
+    font-family:"shree devanagari 714", sans-serif;
+    text-align: left;
+    background: white;
+   
+    width: 800px;
+    margin: 20px auto;
+    box-sizing: border-box;
+    box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+
+
+#test_status{
+    font-size: 1.2em;
+    margin-top: 5%;
+    font-family:"shree devanagari 714", sans-serif;
+    margin-left: 25%; 
+    font-weight: bolder;
+}
 
 
 

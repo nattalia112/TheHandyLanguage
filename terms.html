@@ -8,23 +8,22 @@
         <script src="assets/javascript/quiz1.js"></script>  
     </head>
     <body>
-    <!-- http://www.w3schools.com/howto/tryit.asp?filename=tryhow_js_topnav -->
-                <ul class="topnav" id="myTopnav">
-                    <li class="nav_li"><a href="index.html">Home</a> </li>
-                    <li class="nav_li"><a href="alphabet.html">Alphabet</a> </li>
-                    <li class="nav_li"><a href="numbers.html">Numbers</a> </li>
-                    <li class="nav_li"><a href="terms.html">Terms</a> </li>
-                    <li class="nav_li"><a href="videos.html">Videos</a> </li> 
-                    <li class="nav_li"><a href="quiz.html">Quiz</a> </li> 
-                    <li class="nav_li"><a href="contact.html">Contact</a> </li>
-                    
-                    <li class="icon">
-                        <a href="javascript:void(0);" onclick="myFunction()">&#9776;</a>
-                    </li>
-                 </ul> 
-        
-        
-        
+    <div id="mySidenav" class="sidenav">
+<ul>
+
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  <li><a href="index.html">Home</a></li>
+  <li><a href="alphabet.html">Alphabet</a> </li>
+  <li><a href="numbers.html">Numbers</a> </li>
+  <li><a href="terms.html">Terms</a> </li>
+  <li><a href="videos.html">Videos</a> </li> 
+  <li><a href="quiz.html">Quiz</a> </li> 
+  <li><a href="contact.html">Contact</a> </li>
+</ul>
+</div>
+
+
+<span class="threelines"style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776;</span>
         <div>
             <h1 class="title">Terms</h1>
             <p class="pagedescrip">These are common words that are used often. Also, these words are used in emergencies in order to tell somebody when your in need or to help someone in need.</p>
@@ -79,7 +78,7 @@
             </div>
             
             <div class="caption">
-                <img src="assets/media/no1.jpg"width="300px" height="300px"style="border:none"/> 
+                <img src="assets/media/no.jpg"width="300px" height="300px"style="border:none"/> 
                 <p class="termdescrip">No</p>
             </div> 
             
@@ -99,7 +98,7 @@
             </div>
             
             <div class="caption">
-                <img src="assets/media/boy1.jpg"width="300px" height="300px"style="border:none"/> 
+                <img src="assets/media/boy.jpg"width="300px" height="300px"style="border:none"/> 
                 <p class="termdescrip">Boy</p>
             </div>
             

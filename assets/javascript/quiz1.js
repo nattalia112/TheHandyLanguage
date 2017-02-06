@@ -65,6 +65,9 @@ function openNav() {
 function closeNav() {
     document.getElementById("mySidenav").style.display = "none";
 }
+$('#menu').slicknav({
+		prependTo:'#demo1'
+});
 
 
 

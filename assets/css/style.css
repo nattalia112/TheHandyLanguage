@@ -19,6 +19,7 @@ body {
 .title {
     color:#000;
 	margin-top:30px;
+    margin-bottom: 5px;
 	font-size:50px;
 	text-align:center;
 	text-transform:uppercase;
@@ -35,7 +36,7 @@ body {
 
 footer {
     background: #87CFC2;
-    padding: 1.5%;
+    padding: 2.5%;
     text-align: center;
 }
 
@@ -43,7 +44,8 @@ footer {
 /*-----------------------------------------------2. nav styles---------------------------------------------------------*/
 
 
-@media screen and (min-width: 850px) {
+/* large screen */
+@media only screen and (min-width: 1025px) and (max-width: 2440px) {
 ul {
     list-style-type: none;
     margin: 0;
@@ -54,20 +56,20 @@ ul {
     margin: 0;
     display:flex;
     justify-content:space-between;
-    padding: 0 30px;
+    padding: 0 50px;
 }
 
 ul li {
     float: left;
     text-align: center;
-    font-size: 25px
+    font-size: 25px;
 }
 
 ul li a {
     text-decoration: none;
     color: #fff;
     display: block;
-    padding: 25px 0px;
+    padding: 30px 0px;
 }
 
 a:hover {
@@ -76,17 +78,19 @@ a:hover {
  
 /* hides hambuger buttons when large */    
 .closebtn {
-    visibility: hidden;
+    display: none;
 }
 
 .threelines {
-    visibility: hidden;
+    display: none;
 }
 }
+
 
 /*----------------------------------------------------2.2. hambuger nav---------------------------------------------------------*/
 
-@media all and (max-width: 849px) and (min-width: 280px) {
+/* small and mid screen */
+@media only screen and (max-width: 1024px){
 
 ul {
     list-style-type: none;
@@ -116,12 +120,13 @@ ul {
 }
 
 .sidenav a {
-    padding: 8px 8px 8px 3px;
+    padding: -30px 8px 8px 3px;
     text-decoration: none;
     font-size: 25px;
     color: #fff;
     display: block;
     transition: 0.3s;
+    margin-bottom: 8px;
 }
 
 .sidenav a:hover, .offcanvas a:focus{
@@ -134,9 +139,9 @@ ul {
     right: 200px;
     font-size: 36px;
     margin-left: 50px;
-}
-
-@media screen and (max-height: 450px) {
+}   
+    
+@media only screen and (max-width: 640px) {
   .sidenav {padding-top: 15px;}
   .sidenav a {font-size: 18px;}
 }
@@ -168,6 +173,7 @@ ul {
     
     text-align: center;
     display: inline-block;
+    margin-bottom: 13px;
 }
 
 .box2 {
@@ -178,6 +184,7 @@ ul {
     
     text-align: center;
     display: inline-block;
+    margin-bottom: 13px;
 }
 
 .description {
@@ -544,7 +551,7 @@ iframe {
     align-content: center;
     margin:0 10%;
     margin-top: 80px;
-    margin-bottom: 30px;
+    margin-bottom: 60px;
 }
 
 .quiztitle {
@@ -618,7 +625,7 @@ hr {
 /*--------- circle ---------*/
 
 #circle{
-    margin: 50px 10%;
+    margin: 76px 10%;
     text-align: center;
 }
 
@@ -636,15 +643,18 @@ hr {
 	margin-top:230px;
 }
 
+
 /*--------- images and circle placement ---------*/
 #natalia {
 	background-image:url("../media/natalia.jpg");
 	background-size:cover;
+    margin-right: 10px;
 }
 
 #crystal {
 	background-image:url("../media/crystal.jpg");
 	background-size:cover;
+    margin-right: 10px;
 }
 
 #elda {
@@ -727,6 +737,13 @@ hr {
     /* Videos */
     .videodescrip{
     margin-top: 0px;
+    }
+    
+    iframe {
+    width: 450px;
+    height: 250px;
+    margin-left: -10px;
+} 
     }
     
 }

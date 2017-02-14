@@ -16,6 +16,8 @@ body {
     margin: 0px;
 }
 
+
+
 .title {
     color:#000;
 	margin-top:30px;
@@ -40,12 +42,17 @@ footer {
     text-align: center;
 }
 
+#quizfooter {
+    margin-top: 200px;
+}
+
+
 
 /*-----------------------------------------------2. nav styles---------------------------------------------------------*/
 
 
 /* large screen */
-@media only screen and (min-width: 1025px) and (max-width: 2440px) {
+@media only screen and (min-width: 1025px) and (max-width: 3440px) {
 ul {
     list-style-type: none;
     margin: 0;
@@ -89,15 +96,16 @@ a:hover {
 
 /*----------------------------------------------------2.2. hambuger nav---------------------------------------------------------*/
 
-/* small and mid screen */
-@media only screen and (max-width: 1024px){
+@media only screen and (max-width: 1024px) {
 
 ul {
     list-style-type: none;
+    margin-top: 80px;
 }
     
 .threelines {
-    padding-left: 15px;
+    padding-left: 30px;
+    padding-top: 990;
     color: #87CFC2;
 }
     
@@ -108,7 +116,8 @@ ul {
 .sidenav {
     display: none;
     height: 100%;
-    width: 250px;
+    /* width of blue side nav */
+    width: 350px;
     position: fixed;
     z-index: 1;
     top: 0;
@@ -126,24 +135,24 @@ ul {
     color: #fff;
     display: block;
     transition: 0.3s;
-    margin-bottom: 8px;
+    margin-bottom: 26px;
+    margin-left: 25px
 }
 
 .sidenav a:hover, .offcanvas a:focus{
     color: #000;
 }
 
+/* the x button */
 .sidenav .closebtn {
     position: absolute;
-    top: 0;
-    right: 200px;
-    font-size: 36px;
+    top: 28px;
+    right: 270px;
+    font-size: 52px;
     margin-left: 50px;
 }   
     
 @media only screen and (max-width: 640px) {
-  .sidenav {padding-top: 15px;}
-  .sidenav a {font-size: 18px;}
 }
 }
 
@@ -688,9 +697,7 @@ hr {
 /*----------------------------------------------------Tablet Responsive---------------------------------------------------*/
 /* Styles for some tablet devices */
 @media only screen and (max-width: 1024px) {
-    body {
-        background-color: lightblue;
-    }
+
     
     /* Index */
     .box{
@@ -745,7 +752,19 @@ hr {
     margin-left: -10px;
 } 
     }
-    
+footer {
+    background: #87CFC2;
+    position: relative;
+  margin-top: 110px; /* negative value of footer height */
+  height: 40px;
+  clear: both;
+}  
+
+#quizfooter {
+    margin-top: 246px;
+}
+
+
 }
     
     

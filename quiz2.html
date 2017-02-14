@@ -19,7 +19,7 @@
      * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
      */
 
-    var quiztitle = "Alphabet and Numbers Quiz";
+    var quiztitle = "Terms Quiz";
 
     /**
     * Set the information about your questions here. The correct answer string needs to match
@@ -403,7 +403,7 @@
             text-align:center;
             margin:20px 0;
             font-size: 20px;
-            padding-top: 100px;
+            padding-top: 50px;
         }
         p.pager{
             margin:5px 0 5px; 
@@ -413,11 +413,11 @@
         }
         img.question-image{
             display:block;
-            max-width:550px;
+            max-height: 300px;
+            max-width: 300px;
             margin:10px auto;
             border:1px solid #ccc;
-            max-width: 450px 100%;
-            max-height: 450px;
+            
         }
         #choice-block{
             display:block;
@@ -447,6 +447,20 @@
             cursor:pointer;
             width: 650px;
         }
+        
+        @media all and (max-width: 849px) and (min-width: 280px) {
+            img.question-image{
+                max-width:350px;
+            }
+            
+            .choice-box{
+                width: 350px;
+            }
+            body{
+                text-align: center;
+            }
+        }
+        
     </style>
 </head>
 <body>

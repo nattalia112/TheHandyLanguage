@@ -1,41 +1,470 @@
 <!DOCTYPE html>
-<html lang="en">
-    <head>
-        <meta charset="utf-8">
-        <link rel="shortcut icon" href="">
-        <title>The Handy Language</title>
-        <link type="text/css" rel="stylesheet" href="assets/css/style.css" media="screen">
-    <script src="assets/javascript/quiz1.js"></script>  
-    </head>
-    <body>
-    <div id="mySidenav" class="sidenav">
-<ul>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Quiz</title>
+    <!-- jquery for maximum compatibility -->
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script>
+    /** Simple JavaScript Quiz
+     * version 0.1.0
+     * http://journalism.berkeley.edu
+     * created by: Jeremy Rue @jrue
+     *
+     * Copyright (c) 2013 The Regents of the University of California
+     * Released under the GPL Version 2 license
+     * http://www.opensource.org/licenses/gpl-2.0.php
+     * This program is distributed in the hope that it will be useful, but
+     * WITHOUT ANY WARRANTY; without even the implied warranty of
+     * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+     */
 
-  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-  <li><a href="index.html">Home</a></li>
-  <li><a href="alphabet.html">Alphabet</a> </li>
-  <li><a href="numbers.html">Numbers</a> </li>
-  <li><a href="terms.html">Terms</a> </li>
-  <li><a href="videos.html">Videos</a> </li> 
-  <li><a href="quiz.html">Quiz</a> </li> 
-  <li><a href="contact.html">Contact</a> </li>
-</ul>
-</div>
+    var quiztitle = "Videos Quiz";
+
+    /**
+    * Set the information about your questions here. The correct answer string needs to match
+    * the correct choice exactly, as it does string matching. (case sensitive)
+    *
+    */
+    var quiz = [
+        {
+            "question"      :   "What is the video signing?",
+            "video"         :   "https://youtu.be/BDK4UgMxMfo",
+            "choices"       :   [
+                                    "I am deaf",
+                                    "I know sign language",
+                                    "I am learning sign language",
+                                    "Do you know ASL?"
+                                ],
+            "correct"       :   "I am learning sign language",
+            "explanation"   :   "",
+        },
+        {
+            "question"      :   "What is the video signing?",
+            "video"         :   "https://youtu.be/PDIzJnUjRI8",
+            "choices"       :   [
+                                    "Story",
+                                    "Nook",
+                                    "Look",
+                                    "Book"
+                                ],
+            "correct"       :   "Book",
+            "explanation"   :   "",
+        },
+        {
+            "question"      :   "What is the video signing?",
+            "video"         :   "https://youtu.be/6_Lrue-5bbU",
+            "choices"       :   [
+                                    "Teacher",
+                                    "House",
+                                    "Learning",
+                                    "School"
+                                ],
+            "correct"       :   "Teacher",
+            "explanation"   :   "",
+        },
+        {
+            "question"      :   "What is the video signing?",
+            "video"         :   "https://youtu.be/MTljvBXrTtc",
+            "choices"       :   [
+                                    "You",
+                                    "Me",
+                                    "See",
+                                    "Heart"
+                                ],
+            "correct"       :   "Me",
+            "explanation"   :   "",
+        },
+        {
+            "question"      :   "What is the video signing?",
+            "video"         :   "https://youtu.be/d_4s_cFbEGo",
+            "choices"       :   [
+                                    "Think",
+                                    "Know",
+                                    "Hello",
+                                    "Head"
+                                ],
+            "correct"       :   "Hello",
+            "explanation"   :   "",
+        },
+        {
+            "question"      :   "What is the video signing?",
+            "video"         :   "https://youtu.be/Z1-UESHvkFM",
+            "choices"       :   [
+                                    "Goodbye",
+                                    "Hello",
+                                    "Here",
+                                    "Hi there"
+                                ],
+            "correct"       :   "Goodbye",
+            "explanation"   :   "",
+        },
+        {
+            "question"      :   "What is the video signing?",
+            "video"         :   "https://youtu.be/s3oZOaJ2Gjc",
+            "choices"       :   [
+                                    "My name is...",
+                                    "My home is...",
+                                    "I am deaf",
+                                    "How are you?"
+                                ],
+            "correct"       :   "My name is...",
+            "explanation"   :   "",
+        },
+        {
+            "question"      :   "What is the video signing?",
+            "video"         :   "assets/media/water.jpg",
+            "choices"       :   [
+                                    "My name is...",
+                                    "Where am I?",
+                                    "What is this?",
+                                    "What is your name?"
+                                ],
+            "correct"       :   "Water",
+            "explanation"   :   "",
+        },
+        {
+            "question"      :   "What is the video signing?",
+            "video"         :   "assets/media/job.jpg",
+            "choices"       :   [
+                                    "Job",
+                                    "Jog",
+                                    "Jaw",
+                                    "Use"
+                                ],
+            "correct"       :   "Job",
+            "explanation"   :   "",
+        },
+        {
+            "question"      :   "What is the video signing?",
+            "video"         :   "assets/media/mount.jpg",
+            "choices"       :   [
+                                    "Mount",
+                                    "Macro",
+                                    "Madly",
+                                    "Magic"
+                                ],
+            "correct"       :   "Mount",
+            "explanation"   :   "",
+        },
+        {
+            "question"      :   "What is this video signing?",
+            "video"         :   "assets/media/9.jpg",
+            "choices"       :   [
+                                    "9",
+                                    "3",
+                                    "6",
+                                    "1"
+                                ],
+            "correct"       :   "9",
+            "explanation"   :   "",
+        },
+        {
+            "question"      :   "What is this video signing?",
+            "video"         :   "assets/media/zero.jpg",
+            "choices"       :   [
+                                    "0",
+                                    "10",
+                                    "9",
+                                    "8"
+                                ],
+            "correct"       :   "0",
+            "explanation"   :   "",
+        },
+        {
+            "question"      :   "What is this video signing?",
+            "video"         :   "assets/media/6.jpg",
+            "choices"       :   [
+                                    "6",
+                                    "3",
+                                    "7",
+                                    "2"
+                                ],
+            "correct"       :   "6",
+            "explanation"   :   "",
+        },
+        {
+            "question"      :   "What is this video signing?",
+            "video"         :   "assets/media/8.jpg",
+            "choices"       :   [
+                                    "3",
+                                    "8",
+                                    "2",
+                                    "7"
+                                ],
+            "correct"       :   "8",
+            "explanation"   :   "",
+        },
+        {
+            "question"      :   "What is this video signing?",
+            "video"         :   "assets/media/7.jpg",
+            "choices"       :   [
+                                    "3",
+                                    "8",
+                                    "7",
+                                    "9"
+                                ],
+            "correct"       :   "7",
+            "explanation"   :   "",
+        },
+    ];
 
 
-<span class="threelines"style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776;</span>
-        <div>
-            <h2 class="title">VIDEOS QUIZ</h2>
-            <p class="pagedescrip">For questions 1 - 15 watch the video and choose the correct answer that the sign shows.
-</p>
-        </div>
+    /******* No need to edit below this line *********/  
         
-    <!--FOOTER-->    
-        <footer>
-			Coded by Crystal Menjivar, Elda Mekonnen, and Natalia Lopez &copy 2017
-		</footer>
-    <!--FOOTER-->   
-    </body>
-   
+    var currentquestion = 0, score = 0, submt=true, picked;
+
+    jQuery(document).ready(function($){
+
+        /**
+         * HTML Encoding function for alt tags and attributes to prevent messy
+         * data appearing inside tag attributes.
+         */
+        function htmlEncode(value){
+          return $(document.createElement('div')).text(value).html();
+        }
+
+        /**
+         * This will add the individual choices for each question to the ul#choice-block
+         *
+         * @param {choices} array The choices from each question
+         */
+        function addChoices(choices){
+            if(typeof choices !== "undefined" && $.type(choices) == "array"){
+                $('#choice-block').empty();
+                for(var i=0;i<choices.length; i++){
+                    $(document.createElement('li')).addClass('choice choice-box').attr('data-index', i).text(choices[i]).appendTo('#choice-block');                    
+                }
+            }
+        }
+        
+        /**
+         * Resets all of the fields to prepare for next question
+         */
+        function nextQuestion(){
+            submt = true;
+            $('#explanation').empty();
+            $('#question').text(quiz[currentquestion]['question']);
+            $('#pager').text('Question ' + Number(currentquestion + 1) + ' of ' + quiz.length);
+            if(quiz[currentquestion].hasOwnProperty('video') && quiz[currentquestion]['video'] != ""){
+                if($('#question-video').length == 0){
+                    $(document.createElement('video')).addClass('question-video').attr('id', 'question-video').attr('src', quiz[currentquestion]['video']).attr('alt', htmlEncode(quiz[currentquestion]['question'])).insertAfter('#question');
+                } else {
+                    $('#question-video').attr('src', quiz[currentquestion]['video']).attr('alt', htmlEncode(quiz[currentquestion]['question']));
+                }
+            } else {
+                $('#question-video').remove();
+            }
+            addChoices(quiz[currentquestion]['choices']);
+            setupButtons();
+        }
+
+        /**
+         * After a selection is submitted, checks if its the right answer
+         *
+         * @param {choice} number The li zero-based index of the choice picked
+         */
+        function processQuestion(choice){
+            if(quiz[currentquestion]['choices'][choice] == quiz[currentquestion]['correct']){
+                $('.choice').eq(choice).css({'background-color':'#60E96E'});
+                $('#explanation').html('<strong>Correct!</strong> ' + htmlEncode(quiz[currentquestion]['explanation']));
+                score++;
+            } else {
+                $('.choice').eq(choice).css({'background-color':'#FF6666'});
+                $('#explanation').html('<strong>Incorrect.</strong> ' + htmlEncode(quiz[currentquestion]['explanation']));
+            }
+            currentquestion++;
+            $('#submitbutton').html('NEXT QUESTION &raquo;').on('click', function(){
+                if(currentquestion == quiz.length){
+                    endQuiz();
+                } else {
+                    $(this).text('Check Answer').css({'color':'#222'}).off('click');
+                    nextQuestion();
+                }
+            })
+        }
+
+        /**
+         * Sets up the event listeners for each button.
+         */
+        function setupButtons(){
+            $('.choice').on('mouseover', function(){
+                $(this).css({'background-color':'#e1e1e1'});
+            });
+            $('.choice').on('mouseout', function(){
+                $(this).css({'background-color':'#fff'});
+            })
+            $('.choice').on('click', function(){
+                picked = $(this).attr('data-index');
+                $('.choice').removeAttr('style').off('mouseout mouseover');
+                $(this).css({'border-color':'#222','font-weight':700,'background-color':'#c1c1c1'});
+                if(submt){
+                    submt=false;
+                    $('#submitbutton').css({'color':'#000'}).on('click', function(){
+                        $('.choice').off('click');
+                        $(this).off('click');
+                        processQuestion(picked);
+                    });
+                }
+            })
+        }
+        
+        /**
+         * Quiz ends, display a message.
+         */
+        function endQuiz(){
+            $('#explanation').empty();
+            $('#question').empty();
+            $('#choice-block').empty();
+            $('#submitbutton').remove();
+            $('#question').text("You got " + score + " out of " + quiz.length + " correct.");
+            $(document.createElement('h2')).css({'text-align':'center', 'font-size':'4em'}).text(Math.round(score/quiz.length * 100) + '%').insertAfter('#question');
+        }
+
+        /**
+         * Runs the first time and creates all of the elements for the quiz
+         */
+        function init(){
+            //add title
+            if(typeof quiztitle !== "undefined" && $.type(quiztitle) === "string"){
+                $(document.createElement('h1')).text(quiztitle).appendTo('#frame');
+            } else {
+                $(document.createElement('h1')).text("Quiz").appendTo('#frame');
+            }
+
+            //add pager and questions
+            if(typeof quiz !== "undefined" && $.type(quiz) === "array"){
+                //add pager
+                $(document.createElement('p')).addClass('pager').attr('id','pager').text('Question 1 of ' + quiz.length).appendTo('#frame');
+                //add first question
+                $(document.createElement('h2')).addClass('question').attr('id', 'question').text(quiz[0]['question']).appendTo('#frame');
+                //add video if present
+                if(quiz[0].hasOwnProperty('video') && quiz[0]['video'] != ""){
+                    $(document.createElement('video')).addClass('question-video').attr('id', 'question-video').attr('src', quiz[0]['video']).attr('alt', htmlEncode(quiz[0]['question'])).appendTo('#frame');
+                }
+                $(document.createElement('p')).addClass('explanation').attr('id','explanation').html('&nbsp;').appendTo('#frame');
+            
+                //questions holder
+                $(document.createElement('ul')).attr('id', 'choice-block').appendTo('#frame');
+            
+                //add choices
+                addChoices(quiz[0]['choices']);
+            
+                //add submit button
+                $(document.createElement('div')).addClass('choice-box').attr('id', 'submitbutton').text('Check Answer').css({'font-weight':700,'color':'#222','padding':'30px 0'}).appendTo('#frame');
+            
+                setupButtons();
+            }
+        }
+        
+        init();
+    });
+    </script>
     
+    
+    
+    <style type="text/css" media="all">
+        /*css reset */
+        html,body,div,span,h1,h2,h3,h4,h5,h6,p,code,small,strike,strong,sub,sup,b,u,i{
+            border:0;
+            font-size:100%;
+            vertical-align:baseline;
+            margin:0;
+            padding:0;
+            font-family: chalkboard, sans-serif;
+        } 
+        article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display: block;} 
+        body{
+            line-height:1; 
+            font-family: chalkboard, sans-serif; 
+        } 
+        ol,ul{
+            list-style:none;
+        }
+        strong{
+            font-weight:700;
+        }
+        #frame{
+            background:#fff;
+            padding:10px;
+            margin:3px;
+        }
+        h1{
+            font-family: chalkboard, sans-serif; 
+            text-align:left;
+            border-bottom:1px solid #999;
+            width:auto;
+            font-size: 20px;
+            text-align: center;
+            padding-top: 10px;
+        }
+        h2{
+            font-family: chalkboard, sans-serif;
+            padding:0;
+            text-align:center;
+            margin:20px 0;
+            font-size: 20px;
+            padding-top: 50px;
+        }
+        p.pager{
+            margin:5px 0 5px; 
+            font-family: chalkboard, sans-serif;
+            color:#999;
+            text-align: center;
+        }
+        video.question-video{
+            display:block;
+            max-width:550px;
+            margin:10px auto;
+            border:1px solid #ccc;
+            max-width: 450px 100%;
+            max-height: 450px;
+        }
+        #choice-block{
+            display:block;
+            list-style:none;
+            margin:0;
+            padding:0;
+        }
+        #submitbutton{
+            background:#87CFC2;
+        }
+        #submitbutton:hover{
+            background:#BFBFBF;
+        }
+        #explanation{
+            margin:0 auto;
+            padding:20px;
+            width:75%;
+            text-align: center;
+        }
+        .choice-box{
+            display:block;
+            text-align:center;
+            margin:8px auto;
+            padding:10px 0;
+            border:1px solid #666;
+            border-radius: 10px;
+            cursor:pointer;
+            width: 650px;
+        }
+        
+        @media all and (max-width: 849px) and (min-width: 280px) {
+            img.question-image{
+                max-width:350px;
+            }
+            
+            .choice-box{
+                width: 350px;
+            }
+            body{
+                text-align: center;
+            }
+        }
+        
+    </style>
+</head>
+<body>
+    <div id="frame" role="content"></div>
+</body>
 </html>

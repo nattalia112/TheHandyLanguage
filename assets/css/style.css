@@ -13,6 +13,7 @@ TABLE OF CONTENTS
 /*----------------------------------------------1. universal styles-----------------------------------------------------*/
 body {
     font-family: chalkboard, sans-serif; 
+    background-image:  url("../media/CapstoneMockup.png");
     margin: 0px;
 }
 
@@ -37,7 +38,7 @@ body {
 }
 
 footer {
-    background: #87CFC2;
+    background-color: #87CFC2;
     padding: 2.5%;
     text-align: center;
 }
@@ -117,7 +118,7 @@ ul {
     display: none;
     height: 100%;
     /* width of blue side nav */
-    width: 350px;
+    width: 550px;
     position: fixed;
     z-index: 1;
     top: 0;
@@ -131,7 +132,7 @@ ul {
 .sidenav a {
     padding: -30px 8px 8px 3px;
     text-decoration: none;
-    font-size: 25px;
+    font-size: 55px;
     color: #fff;
     display: block;
     transition: 0.3s;
@@ -153,6 +154,9 @@ ul {
 }   
     
 @media only screen and (max-width: 640px) {
+    .sidenav a {
+        font-size: 45px;
+    }
 }
 }
 
@@ -179,7 +183,6 @@ ul {
     padding: 20px 20px 0px 20px;
     font-size: 25px;
     width: 550px;
-    
     text-align: center;
     display: inline-block;
     margin-bottom: 13px;
@@ -207,6 +210,46 @@ ul {
     font-weight: bold;
     text-transform: uppercase;
 }
+
+
+
+
+@media (max-width: 600px) {
+    
+    .about {
+        margin: 0px;
+        padding: 5px;
+    }
+    body{
+        margin: 1px;
+    }
+    
+    .title{
+        padding-bottom: 40px;
+    }
+
+    .box {
+        width: auto;
+        background-color:#F2F2F2;
+        padding: 20px 20px 0px 20px;
+        width: 300px;
+
+    }
+    .box2{
+        width: auto;
+        background-color:#F2F2F2;
+        padding: 20px 20px 0px 20px;
+        width: 300px;
+    }
+    
+    .description{
+        font-size: 18px;
+        width: 300px;
+    }
+    
+}
+
+
 
 
 
@@ -545,7 +588,29 @@ iframe {
 }
 
 
+@media (max-width: 600px) {
+    .individeos{
+        width: 300px;
+        margin: 0px;
+        position: relative;
+    }
+    .videos{
+        width: 300px;
+        margin: 40px;
 
+        
+    }
+    iframe{
+        width: 300px;
+        height: 250px;
+
+    }
+    
+    .videodescrip {
+        width: 300px;
+
+    }
+}
 
 
 
@@ -560,7 +625,7 @@ iframe {
     align-content: center;
     margin:0 10%;
     margin-top: 80px;
-    margin-bottom: 60px;
+    margin-bottom: 200px;
 }
 
 .quiztitle {
@@ -585,47 +650,7 @@ iframe {
 }
 
 
-/*----------------------------------------------------7.1. quiz1 page------------------------------------------------------*/
 
-.qpicture {
-    align-items: center;
-    margin:0 10%;
-    margin-bottom: 10px;
-}
-
-.qnumber {
-    width: 500px;
-    margin: auto;  
-}
-
-.choices {
-    width: 500px;
-    margin: auto;
-    margin-bottom: 60px;
-}
-
-hr {
-    border-style: solid;
-    border-width: 6px;
-    border-color: #87CFC2;
-    align-items: center;
-    margin:0 8%;
-    margin-bottom: 10px;
-}
-
-/*  submit button  */
-
-.submitb {
-    width: 52.5px;
-    margin: auto;
-    margin-bottom: 30px
-}
-
-
-/*----------------------------------------------------7.2. quiz2 page------------------------------------------------------*/
-
-
-/*----------------------------------------------------7.3. quiz3 page------------------------------------------------------*/
 
 
 /*----------------------------------------------------8. contact page---------------------------------------------------*/
@@ -746,11 +771,7 @@ hr {
     margin-top: 0px;
     }
     
-    iframe {
-    width: 450px;
-    height: 250px;
-    margin-left: -10px;
-} 
+   
     }
 footer {
     background: #87CFC2;
@@ -768,45 +789,6 @@ footer {
 }
     
     
-/*-----------Quiz------------*/
-
-#title {
-    font-family: "shree devanagari 714", sans-serif;
-    color: white;
-    margin-top: 6%;
-}
-
-#subjects {
-    font-family: "shree devanagari 714", sans-serif;
-    color: white;
-    font-size: 1em;
-    text-align: center;
-}
-
-div#test{ 
-    border:#000 9px double; 
-    padding:10px 40px 40px 40px;
-    font-size: 20px;
-    font-family:"shree devanagari 714", sans-serif;
-    text-align: left;
-    background: white;
-   
-    width: 800px;
-    margin: 20px auto;
-    box-sizing: border-box;
-    box-sizing: border-box;
-    box-sizing: border-box;
-}
-
-
-
-#test_status{
-    font-size: 1.2em;
-    margin-top: 5%;
-    font-family:"shree devanagari 714", sans-serif;
-    margin-left: 25%; 
-    font-weight: bolder;
-}
 
 
 
